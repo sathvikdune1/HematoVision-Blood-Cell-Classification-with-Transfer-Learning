@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .card {
+            background-color: #fff;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .image {
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .result {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .confidence {
+            color: green;
+            font-size: 18px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🧬 Blood Cell Classification Result</h1>
+    <div class="card">
+        <img src="{{ image_path }}" class="image" alt="Uploaded Blood Cell Image">
+        <div class="result">🔍 Predicted Class: {{ predicted_class }}</div>
+        <div class="confidence">📊 Confidence: {{ confidence }}%</div>
+        <br>
+        <a href="/" class="btn">🔙 Go Back</a>
+    </div>
+
+</body>
+</html>

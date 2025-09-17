@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Cell Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .upload-box {
+            background-color: white;
+            display: inline-block;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+        }
+
+        input[type="submit"] {
+            padding: 10px 25px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔬 Blood Cell Image Classifier</h1>
+
+    <div class="upload-box">
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <label for="image">Choose a blood cell image (JPEG/PNG):</label><br>
+            <input type="file" name="image" accept="image/*" required><br>
+            <input type="submit" value="Predict">
+        </form>
+        <p>Upload an image of a blood cell to identify its type: EOSINOPHIL, LYMPHOCYTE, MONOCYTE, or NEUTROPHIL.</p>
+    </div>
+
+</body>
+</html>
